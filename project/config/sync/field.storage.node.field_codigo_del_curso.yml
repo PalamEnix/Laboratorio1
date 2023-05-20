@@ -1,0 +1,21 @@
+uuid: 9500cfb6-c920-4741-83de-8c7c10c866e7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_codigo_del_curso
+field_name: field_codigo_del_curso
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
