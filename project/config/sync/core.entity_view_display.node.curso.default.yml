@@ -10,8 +10,93 @@ dependencies:
     - node.type.curso
   module:
     - file
+    - layout_builder
     - text
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          8d0bd2ce-5706-4f42-a64d-1ed7bb9270a6:
+            uuid: 8d0bd2ce-5706-4f42-a64d-1ed7bb9270a6
+            region: content
+            configuration:
+              id: 'extra_field_block:node:curso:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          1cb69b03-6e9e-4d8f-a0ad-127e1f83769f:
+            uuid: 1cb69b03-6e9e-4d8f-a0ad-127e1f83769f
+            region: content
+            configuration:
+              id: 'field_block:node:curso:field_codigo_del_curso'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          e9c0bfaf-8cfd-4f4a-8e25-0924be6171ae:
+            uuid: e9c0bfaf-8cfd-4f4a-8e25-0924be6171ae
+            region: content
+            configuration:
+              id: 'field_block:node:curso:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          5e275f2c-c7f7-4985-b6fe-19e96b0dcdae:
+            uuid: 5e275f2c-c7f7-4985-b6fe-19e96b0dcdae
+            region: content
+            configuration:
+              id: 'field_block:node:curso:field_programa_del_curso'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: file_default
+                label: above
+                settings:
+                  use_description_as_link_text: true
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          63742df1-9bee-448d-8457-fbf0e99d801d:
+            uuid: 63742df1-9bee-448d-8457-fbf0e99d801d
+            region: content
+            configuration:
+              id: 'field_block:node:curso:field_impartido_en'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+        third_party_settings: {  }
 id: node.curso.default
 targetEntityType: node
 bundle: curso
@@ -22,7 +107,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 2
     region: content
   field_codigo_del_curso:
     type: string
@@ -30,7 +115,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 102
+    weight: 1
     region: content
   field_impartido_en:
     type: entity_reference_label
@@ -38,7 +123,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 104
+    weight: 4
     region: content
   field_programa_del_curso:
     type: file_default
@@ -46,11 +131,11 @@ content:
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
-    weight: 103
+    weight: 3
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden: {  }

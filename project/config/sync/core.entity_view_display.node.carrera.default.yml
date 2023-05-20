@@ -9,8 +9,77 @@ dependencies:
     - node.type.carrera
   module:
     - file
+    - layout_builder
     - text
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          d4cbb381-f53e-4ec3-8378-c09b4645f531:
+            uuid: d4cbb381-f53e-4ec3-8378-c09b4645f531
+            region: content
+            configuration:
+              id: 'extra_field_block:node:carrera:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          9fed118f-2cf4-4e42-a49d-cde4bbd70db8:
+            uuid: 9fed118f-2cf4-4e42-a49d-cde4bbd70db8
+            region: content
+            configuration:
+              id: 'field_block:node:carrera:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          eaddf655-6ae0-4edd-8f28-f686b09f09c8:
+            uuid: eaddf655-6ae0-4edd-8f28-f686b09f09c8
+            region: content
+            configuration:
+              id: 'field_block:node:carrera:field_ficha_profesional'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: file_default
+                label: above
+                settings:
+                  use_description_as_link_text: true
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          c1c88673-5b73-4706-a6dd-4569a85df946:
+            uuid: c1c88673-5b73-4706-a6dd-4569a85df946
+            region: content
+            configuration:
+              id: 'field_block:node:carrera:field_campus_al_que_pertenece'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
 id: node.carrera.default
 targetEntityType: node
 bundle: carrera
